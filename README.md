@@ -1,66 +1,339 @@
 # Renewal Risk Intelligence
 
-A Python-based renewal risk intelligence prototype for BizOps teams. The project ingests account, usage, ticket, NPS, CSM note, and changelog signals, builds a unified account-level customer 360 view, scores renewal risk, and generates plain-English explanations plus recommended actions.
+## Overview
 
-## What the solution does
+Renewal Risk Intelligence is an end-to-end Python application that helps Customer Success and BizOps teams identify customer accounts that are at risk of churn or downgrade before renewal.
 
-- Ingests all provided source datasets from the raw folder
-- Cleans and normalizes the account, support, usage, and NPS records
-- Engineers product-health and customer-health features
-- Uses an LLM call through OpenRouter/OpenAI-compatible APIs for note analysis when an API key is available
-- Falls back to a deterministic heuristic analysis when the key is not configured so the demo remains runnable
-- Produces a ranked renewal report and a Streamlit dashboard for exploration
+The system combines multiple business signals such as product usage, support history, NPS feedback, CSM notes, and product changelog information to generate a unified Customer 360 view, calculate renewal risk, and recommend proactive actions.
 
-## Architecture
+An interactive Streamlit dashboard is included to help users explore renewal insights visually.
 
-- `main.py` runs the full batch pipeline and writes outputs to the `outputs/` folder
-- `src/services/` handles data loading, cleaning, merging, and parsing
-- `src/scoring/risk_engine.py` calculates renewal risk bands and confidence
-- `src/reporting/report_generator.py` converts raw signals into concise, customer-facing explanations
-- `src/analysis/llm_analyzer.py` + `src/services/llm_service.py` perform note-level AI analysis
-- `app.py` provides a simple interactive Streamlit demo
+---
 
-## Run locally
+# Problem Statement
 
-1. Create or activate the project virtual environment.
-2. Install dependencies:
+Customer renewal decisions are rarely influenced by a single metric.
 
-   `pip install -r requirements.txt`
+Important signals are spread across different systems:
 
-3. Optionally set an LLM key in `.env`:
+* CRM account information
+* Product usage trends
+* Support ticket history
+* Customer satisfaction (NPS)
+* Customer Success Manager notes
+* Product release and migration updates
 
-   `OPENROUTER_API_KEY=<your-key>`
+The goal of this project is to combine these disconnected signals into one intelligent system that highlights customers requiring attention before renewal.
 
-4. Run the batch pipeline:
+---
 
-   `python main.py`
+# Features
 
-5. Launch the demo UI:
+* Multi-source data ingestion
+* Data cleaning and preprocessing
+* Customer 360 dataset creation
+* Product usage trend analysis
+* Support health analysis
+* NPS analysis
+* LLM-powered CSM note analysis
+* Product changelog analysis
+* Explainable renewal risk scoring
+* Plain-English risk explanations
+* Recommended next actions
+* Interactive Streamlit dashboard
+* Exportable renewal reports
 
-   `streamlit run app.py`
+---
 
-## Notable analysis choices
+# Project Architecture
 
-- The changelog is treated as a migration-risk signal, not just a historical artifact. The parser surfaces deprecated SDKs and migration pressure, which helps explain renewal risk that would be invisible from purely tabular usage data.
-- The CSM notes are noisy, so the current pipeline uses regex-based account extraction and a robust fallback analysis path. This keeps the workflow stable even in low-token or no-LLM settings.
-- The non-obvious insight is that customers still bound to legacy SDK patterns are often at elevated risk even when their current NPS is moderate. The changelog + usage + support signal combination makes that pattern much clearer.
+```
+Raw Data
+│
+├── accounts.csv
+├── usage_metrics.csv
+├── support_tickets.csv
+├── nps_responses.csv
+├── csm_notes.txt
+└── changelog.md
+        │
+        ▼
+Data Loading
+        │
+        ▼
+Data Cleaning
+        │
+        ▼
+Feature Engineering
+        │
+        ▼
+Customer 360 Dataset
+        │
+        ▼
+Risk Engine
+        │
+        ▼
+LLM Analysis
+        │
+        ▼
+Report Generator
+        │
+        ▼
+Streamlit Dashboard
+```
 
-## Tradeoffs and production improvements
+---
 
-- Right now, the project favors a transparent, explainable scoring model over a highly exotic model architecture.
-- The LLM path is intentionally lightweight and robust: if the external API is unavailable, the system still produces a usable result from keyword heuristics.
-- For production, I would add:
-  - a dedicated entity-resolution step for account-name matching
-  - model versioning and prompt version tracking
-  - a real observability layer for API failures and fallback rates
-  - a stricter governance process for LLM output validation and auditability
-  - a scheduled pipeline with persistent data-quality checks
+# Project Structure
 
-## Deliverable summary
+```
+Renewal-Risk-Intelligence/
 
-The repository now includes:
+├── data/
+│   ├── accounts.csv
+│   ├── usage_metrics.csv
+│   ├── support_tickets.csv
+│   ├── nps_responses.csv
+│   ├── csm_notes.txt
+│   └── changelog.md
+│
+├── outputs/
+│   ├── customer_360.csv
+│   ├── risk_scored_accounts.csv
+│   ├── final_report.csv
+│   └── llm_analysis.csv
+│
+├── src/
+│   ├── services/
+│   ├── scoring/
+│   ├── reporting/
+│   ├── analysis/
+│   └── utils/
+│
+├── app.py
+├── main.py
+├── requirements.txt
+└── README.md
+```
 
-- an end-to-end Python pipeline
-- a Streamlit dashboard demo
-- generated outputs in `outputs/`
-- a README with the approach and run instructions
+---
+
+# Workflow
+
+### Step 1 — Data Loading
+
+The application loads all provided datasets including account information, product usage, support tickets, NPS responses, CSM notes, and the product changelog.
+
+---
+
+### Step 2 — Data Cleaning
+
+The datasets are cleaned by:
+
+* Handling missing values
+* Standardizing formats
+* Parsing dates
+* Removing inconsistent records
+* Preparing the data for feature engineering
+
+---
+
+### Step 3 — Feature Engineering
+
+Business features are created such as:
+
+* API usage decline
+* Active user decline
+* Workflow decline
+* Ticket counts
+* Escalations
+* Resolution time
+* Days until renewal
+* NPS category
+
+These features provide a complete view of customer health.
+
+---
+
+### Step 4 — Customer 360
+
+All engineered features are merged into a single Customer 360 dataset.
+
+Each row represents one customer and contains all important renewal signals.
+
+---
+
+### Step 5 — Risk Engine
+
+A transparent rule-based scoring engine assigns a renewal risk score based on:
+
+* Product adoption decline
+* Customer activity decline
+* Support ticket severity
+* NPS feedback
+* SDK version
+* Contract renewal timeline
+* ARR impact
+
+Each account is classified as:
+
+* High Risk
+* Medium Risk
+* Low Risk
+
+The engine also records the reasons behind every score.
+
+---
+
+### Step 6 — LLM Analysis
+
+Customer Success Manager notes are analyzed using an LLM through OpenRouter.
+
+The model extracts business signals such as:
+
+* Overall customer sentiment
+* Budget concerns
+* Competitor mentions
+* Migration issues
+* Executive involvement
+* Renewal risk reasons
+
+If an API key is unavailable, the application gracefully falls back to a deterministic heuristic approach so the project remains fully runnable.
+
+---
+
+### Step 7 — Report Generation
+
+The report generator creates:
+
+* Plain-English explanations
+* Recommended actions
+* Risk priorities
+
+This makes the output useful for Customer Success Managers without requiring them to interpret raw metrics.
+
+---
+
+### Step 8 — Streamlit Dashboard
+
+The dashboard allows users to:
+
+* Filter customers by region, industry, and risk tier
+* View renewal KPIs
+* Explore risk distribution
+* Analyze ARR at risk
+* Review the highest-risk accounts
+* Drill into individual customer details
+* Download the final report
+
+---
+
+# Risk Scoring Logic
+
+The final renewal risk score considers multiple business signals including:
+
+* Product usage decline
+* Active user decline
+* Workflow decline
+* Deprecated SDK usage
+* Critical support tickets
+* Ticket escalations
+* Resolution time
+* Customer satisfaction (NPS)
+* Renewal timeline
+* ARR value
+* Plan tier
+* AI-generated customer signals
+
+This creates a more balanced view than relying on any single metric.
+
+---
+
+# Non-Obvious Insight
+
+One insight identified in this project is that customers still using deprecated SDK versions often exhibit increased renewal risk, even when traditional customer health metrics appear acceptable.
+
+By combining changelog information with product usage and support data, these hidden migration risks become visible much earlier.
+
+---
+
+# Technology Stack
+
+* Python
+* Pandas
+* NumPy
+* OpenAI SDK
+* OpenRouter API
+* Streamlit
+* Plotly
+* Regex
+* dotenv
+
+---
+
+# Running the Project
+
+## 1. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+## 2. Configure API Key (Optional)
+
+Create a `.env` file:
+
+```text
+OPENROUTER_API_KEY=your_api_key
+```
+
+The project can still run without an API key by using the fallback analysis.
+
+---
+
+## 3. Execute the pipeline
+
+```bash
+python main.py
+```
+
+Generated files will be saved in the `outputs` folder.
+
+---
+
+## 4. Launch the dashboard
+
+```bash
+streamlit run app.py
+```
+
+---
+
+# Production Improvements
+
+If this were developed further for production use, I would add:
+
+* Machine learning-based risk prediction
+* Automated entity matching across inconsistent customer names
+* Prompt versioning and LLM monitoring
+* Data validation and quality monitoring
+* Pipeline scheduling using Airflow or Prefect
+* Model performance tracking
+* Better dashboard filtering and search
+* Integration with CRM platforms such as Salesforce
+
+---
+
+# Tradeoffs
+
+For this prototype, I chose a transparent and explainable rule-based scoring engine instead of a complex predictive model.
+
+This makes every risk score easy to understand, debug, and explain to Customer Success teams while still demonstrating how AI can enhance decision-making through LLM-powered analysis of unstructured customer notes.
+
+---
+
+# Author
+
+**Sanika Thorat**
+
+Applied AI Engineer Take-Home Assignment
