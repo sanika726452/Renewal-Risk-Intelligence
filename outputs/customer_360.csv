@@ -1,0 +1,121 @@
+account_id,account_name,arr,contract_end_date,plan_tier,industry,csm_name,region,days_to_renewal,renewing_next_90_days,api_decline_pct,active_user_decline_pct,workflow_decline_pct,latest_sdk,total_tickets,open_tickets,escalated_tickets,p1_tickets,avg_resolution_time,score,verbatim_comment,nps_category
+1000,Acme Corp,17000,2026-05-25,Starter,Media & Publishing,Carlos Mendez,NA-West,55,True,52.24,50.0,50.0,v3.2.0,7.0,2.0,1.0,2.0,60.31666666666667,6.0,The new editor is a downgrade. We've wasted months trying to adapt.,Detractor
+1001,BrightPath Solutions,21000,2026-07-04,Starter,Travel & Hospitality,Sarah Chen,NA-East,95,False,56.88,50.0,60.0,v3.2.0,13.0,6.0,2.0,10.0,62.55555555555554,8.0,Support takes forever. Our P1 sat open for 3 weeks.,Passive
+1002,NovaTech Industries,29000,2026-05-19,Starter,Manufacturing,Sarah Chen,LATAM,49,True,72.05,66.67,80.0,v3.2.0,14.0,5.0,2.0,5.0,54.137499999999996,0.0,Support takes forever. Our P1 sat open for 3 weeks.,Detractor
+1003,Meridian Health,193000,2026-06-12,Growth,Media & Publishing,David Kim,LATAM,73,True,39.01,36.36,48.15,v3.1.2,8.0,5.0,2.0,1.0,49.98333333333333,8.0,Great support team. Always responsive.,Passive
+1004,Pinnacle Media Group,203000,2026-05-10,Scale,Travel & Hospitality,Raj Patel,EMEA,40,True,59.47,53.33,60.0,v3.4.1,7.0,2.0,3.0,2.0,69.26666666666667,6.0,Constant downtime and no communication. We're done.,Detractor
+1005,Vanguard Retail,106000,2026-06-02,Growth,Financial Services,James Okafor,APAC,63,True,73.17,69.23,62.96,v3.2.0,8.0,2.0,3.0,2.0,51.357142857142854,2.0,Support takes forever. Our P1 sat open for 3 weeks.,Detractor
+1006,Atlas Financial,39000,2026-06-03,Starter,Government,Emily Watson,NA-East,64,True,51.19,66.67,50.0,v3.4.1,8.0,4.0,1.0,4.0,58.98333333333333,8.0,We love the CONCEPT but the execution has fallen off a cliff this year.,Passive
+1007,Zenith Publishing,1625000,2026-05-05,Enterprise,Travel & Hospitality,James Okafor,LATAM,35,True,61.79,56.76,56.31,v3.1.2,6.0,3.0,0.0,2.0,40.475,-1.0,,No Response
+1008,Crescent Labs,390000,2026-07-02,Scale,Media & Publishing,James Okafor,NA-East,93,False,-12.04,13.89,-19.77,v4.1.0,3.0,0.0,0.0,1.0,18.933333333333334,5.0,Fine for now but we're watching competitors closely.,Detractor
+1009,Orion Education,126000,2026-04-30,Growth,Media & Publishing,James Okafor,APAC,30,True,25.38,-10.0,-15.38,v4.0.0,3.0,0.0,0.0,0.0,31.73333333333333,8.0,Fine for now but we're watching competitors closely.,Passive
+1010,TerraFirma Manufacturing,438000,2026-07-10,Scale,SaaS / Technology,Priya Sharma,EMEA,101,False,32.01,46.15,5.88,v4.0.0,7.0,1.0,0.0,0.0,28.0,-1.0,,No Response
+1011,Skyline Travel,310000,2026-05-24,Scale,Financial Services,Priya Sharma,LATAM,54,True,-3.54,20.51,-13.04,v4.1.0,4.0,1.0,0.0,0.0,29.725,7.0,"Good product, needs better documentation.",Passive
+1012,Quantum Commerce,93000,2026-06-18,Growth,Travel & Hospitality,Emily Watson,LATAM,79,True,13.7,30.77,45.45,v4.0.0,6.0,2.0,2.0,0.0,31.46666666666667,6.0,Solid CMS but the pricing feels steep for what we get.,Detractor
+1013,RedLeaf Healthcare,135000,2026-04-27,Growth,Media & Publishing,Sarah Chen,EMEA,27,True,8.54,0.0,12.5,v4.0.0,4.0,2.0,0.0,1.0,21.275000000000002,9.0,El producto es bueno pero el soporte en español es inexistente.,Promoter
+1014,BluePeak Software,1061000,2026-04-28,Enterprise,Media & Publishing,Raj Patel,NA-West,28,True,15.65,10.39,6.56,v4.0.0,4.0,0.0,0.0,0.0,23.75,10.0,Le produit est bon mais l'interface n'est pas intuitive pour notre équipe marketing.,Promoter
+1015,Evergreen Media,1330000,2026-07-11,Enterprise,Education,Priya Sharma,EMEA,102,False,23.08,24.69,35.78,v4.0.0,4.0,2.0,0.0,0.0,25.5,-1.0,,No Response
+1016,Northstar Logistics,115000,2026-06-30,Growth,Manufacturing,Emily Watson,LATAM,91,False,19.03,16.67,11.11,v4.1.0,7.0,0.0,2.0,0.0,23.133333333333336,7.0,Le produit est bon mais l'interface n'est pas intuitive pour notre équipe marketing.,Passive
+1017,Pacific Rim Trading,1724000,2026-06-10,Enterprise,SaaS / Technology,Carlos Mendez,NA-West,71,True,20.37,15.71,41.57,v4.0.0,4.0,1.0,0.0,0.0,16.95,5.0,产品功能还可以，但客服团队沟通效率太低了。我们多次要求更换客户经理都没有得到回应。非常失望。,Detractor
+1018,Ironclad Security,691000,2026-04-26,Enterprise,Financial Services,Priya Sharma,NA-West,26,True,-8.21,-29.49,-22.75,v4.2.3,3.0,0.0,0.0,0.0,15.433333333333332,10.0,Transformed how our team publishes content. Love it.,Promoter
+1019,Summit Analytics,1751000,2026-04-28,Enterprise,Travel & Hospitality,Anna Kowalski,LATAM,28,True,-2.72,-6.98,-58.94,v4.1.0,1.0,0.0,0.0,0.0,19.6,3.0,Great developer experience and the support team is phenomenal.,Detractor
+1020,Coral Bay Resorts,1610000,2026-05-22,Enterprise,Manufacturing,Sarah Chen,NA-East,52,True,-0.43,-12.35,-10.75,v4.1.0,1.0,0.0,0.0,0.0,9.5,10.0,Great developer experience and the support team is phenomenal.,Promoter
+1021,Falcon Aerospace,378000,2026-05-04,Scale,Retail,Anna Kowalski,NA-West,34,True,-25.81,-12.12,5.56,v4.3.0,3.0,0.0,0.0,0.0,11.199999999999998,-1.0,,No Response
+1022,Jade River Tech,507000,2026-05-23,Enterprise,Manufacturing,Priya Sharma,LATAM,53,True,-13.79,-20.25,-22.97,v4.2.3,0.0,0.0,0.0,0.0,0.0,9.0,Best headless CMS on the market. Period.,Promoter
+1023,Mosaic Digital,35000,2026-07-10,Starter,Manufacturing,Carlos Mendez,NA-West,101,False,-20.42,33.33,-50.0,v4.3.0,3.0,0.0,0.0,1.0,10.333333333333334,9.0,Transformed how our team publishes content. Love it.,Promoter
+1024,Beacon Insurance,285000,2026-06-28,Scale,Manufacturing,Sarah Chen,LATAM,89,True,-3.09,-6.06,0.0,v4.2.3,0.0,0.0,0.0,0.0,0.0,9.0,Transformed how our team publishes content. Love it.,Promoter
+1025,Tidal Wave Sports,456000,2026-04-22,Scale,Financial Services,Raj Patel,EMEA,22,True,-27.58,-36.67,12.07,v4.1.0,0.0,0.0,0.0,0.0,0.0,10.0,,Promoter
+1026,Golden Gate Ventures,65000,2026-05-20,Growth,Government,James Okafor,NA-East,50,True,5.69,-25.0,-12.0,v4.3.0,2.0,0.0,0.0,0.0,15.8,7.0,,Passive
+1027,Cedar Hill Partners,645000,2026-06-27,Enterprise,Healthcare,Priya Sharma,APAC,88,True,-6.29,10.11,-15.33,v4.3.0,1.0,0.0,0.0,0.0,8.3,5.0,Would recommend to anyone in our industry.,Detractor
+1028,Arctic Fox Games,119000,2026-06-26,Growth,Government,Anna Kowalski,NA-West,87,True,1.04,8.33,0.0,v4.2.3,2.0,1.0,0.0,0.0,7.1,6.0,Transformed how our team publishes content. Love it.,Detractor
+1029,Sapphire Networks,132000,2026-06-10,Growth,SaaS / Technology,David Kim,LATAM,71,True,-26.01,-9.09,-3.45,v4.3.0,1.0,0.0,0.0,0.0,15.5,8.0,We evaluated 5 CMS platforms. Contentstack won easily.,Passive
+1030,Ember Creative,754000,2026-11-18,Enterprise,Media & Publishing,James Okafor,EMEA,232,False,-8.59,-20.99,-15.04,v4.1.0,1.0,0.0,0.0,0.0,16.9,10.0,Transformed how our team publishes content. Love it.,Promoter
+1031,Prism Optics,30000,2026-11-04,Starter,E-commerce,James Okafor,NA-East,218,False,-31.74,-50.0,0.0,v4.2.3,3.0,0.0,0.0,0.0,14.333333333333334,-1.0,,No Response
+1032,Obsidian Data,68000,2026-07-31,Growth,SaaS / Technology,James Okafor,LATAM,122,False,-22.8,-16.67,-33.33,v4.3.0,3.0,0.0,0.0,0.0,14.833333333333334,7.0,Transformed how our team publishes content. Love it.,Passive
+1033,Silver Lining Cloud,123000,2027-03-20,Growth,Media & Publishing,Priya Sharma,LATAM,354,False,-39.77,-18.18,-10.0,v4.2.3,3.0,0.0,0.0,0.0,4.3,8.0,,Passive
+1034,Marble Arch Media,1010000,2027-03-14,Enterprise,Travel & Hospitality,Carlos Mendez,NA-East,348,False,-4.18,-19.48,-26.94,v4.3.0,3.0,1.0,0.0,0.0,12.866666666666667,8.0,Would recommend to anyone in our industry.,Passive
+1035,Velvet Rope Events,43000,2027-01-12,Starter,Travel & Hospitality,Anna Kowalski,APAC,287,False,-10.02,-50.0,-20.0,v4.2.3,3.0,0.0,0.0,0.0,10.733333333333334,9.0,Best headless CMS on the market. Period.,Promoter
+1036,Iron Bridge Capital,21000,2026-08-15,Starter,Travel & Hospitality,Raj Patel,NA-East,137,False,-15.31,33.33,-50.0,v4.1.0,0.0,0.0,0.0,0.0,0.0,10.0,Best headless CMS on the market. Period.,Promoter
+1037,Crystal Clear Analytics,100000,2026-10-20,Growth,Manufacturing,David Kim,NA-West,203,False,-2.74,-27.27,0.0,v4.2.3,1.0,0.0,0.0,0.0,8.4,10.0,We evaluated 5 CMS platforms. Contentstack won easily.,Promoter
+1038,Opal Systems,885000,2026-12-04,Enterprise,Education,Carlos Mendez,NA-East,248,False,-15.1,-11.59,-30.29,v4.1.0,1.0,0.0,0.0,0.0,19.5,9.0,Transformed how our team publishes content. Love it.,Promoter
+1039,Redwood Health,1654000,2026-09-03,Enterprise,E-commerce,Sarah Chen,NA-East,156,False,-4.51,-1.14,-13.6,v4.2.3,0.0,0.0,0.0,0.0,0.0,10.0,Would recommend to anyone in our industry.,Promoter
+1040,Cobalt Robotics,94000,2027-02-08,Growth,Education,David Kim,NA-West,314,False,-22.53,-20.0,-12.0,v4.2.3,0.0,0.0,0.0,0.0,0.0,10.0,Transformed how our team publishes content. Love it.,Promoter
+1041,Amber Trail Outdoors,623000,2026-10-07,Enterprise,Travel & Hospitality,Sarah Chen,APAC,190,False,-21.28,-4.76,20.96,v4.1.0,3.0,1.0,0.0,0.0,8.0,2.0,Best headless CMS on the market. Period.,Detractor
+1042,Granite Peak Financial,439000,2026-12-08,Scale,Travel & Hospitality,David Kim,NA-West,252,False,-13.43,-14.71,-12.5,v4.1.0,3.0,0.0,0.0,1.0,14.266666666666666,10.0,Transformed how our team publishes content. Love it.,Promoter
+1043,Sunflower Foods,128000,2026-11-03,Growth,E-commerce,Sarah Chen,EMEA,217,False,-9.03,-30.0,11.43,v4.3.0,1.0,0.0,0.0,0.0,19.7,7.0,Transformed how our team publishes content. Love it.,Passive
+1044,Neon Pixel Studios,18000,2027-03-16,Starter,Manufacturing,Priya Sharma,NA-East,350,False,-8.97,-50.0,-50.0,v4.3.0,3.0,0.0,0.0,0.0,15.633333333333333,-1.0,,No Response
+1045,Windmill Energy,27000,2026-08-19,Starter,Government,James Okafor,NA-West,141,False,-13.94,0.0,-50.0,v4.3.0,3.0,0.0,0.0,0.0,10.966666666666669,-1.0,,No Response
+1046,Onyx Defense,751000,2026-11-18,Enterprise,Government,Sarah Chen,LATAM,232,False,-20.14,-13.64,-13.73,v4.3.0,2.0,0.0,0.0,0.0,12.1,9.0,Best headless CMS on the market. Period.,Promoter
+1047,Topaz AI,42000,2027-04-08,Starter,SaaS / Technology,Emily Watson,NA-West,373,False,-54.98,-50.0,-20.0,v4.2.3,2.0,0.0,0.0,1.0,17.35,-1.0,,No Response
+1048,Lunar Dynamics,325000,2026-11-27,Scale,Travel & Hospitality,Priya Sharma,EMEA,241,False,-5.61,2.94,17.7,v4.1.0,0.0,0.0,0.0,0.0,0.0,8.0,Transformed how our team publishes content. Love it.,Passive
+1049,Fossil Creek Ranch,1163000,2026-08-21,Enterprise,E-commerce,David Kim,LATAM,143,False,-43.52,-53.62,-8.14,v4.3.0,2.0,0.0,0.0,0.0,10.6,-1.0,,No Response
+1050,Delta Wave Audio,20000,2026-11-01,Starter,Manufacturing,Emily Watson,NA-West,215,False,-20.53,0.0,-20.0,v4.3.0,1.0,0.0,0.0,0.0,16.5,8.0,Best headless CMS on the market. Period.,Passive
+1051,Ivory Tower Education,236000,2026-11-17,Scale,SaaS / Technology,Emily Watson,NA-West,231,False,-22.64,12.82,0.0,v4.2.3,1.0,0.0,0.0,0.0,13.6,10.0,Best headless CMS on the market. Period.,Promoter
+1052,Crimson Tide Logistics,1639000,2026-12-16,Enterprise,Government,Sarah Chen,LATAM,260,False,3.55,-32.35,-20.0,v4.2.3,1.0,0.0,0.0,0.0,11.1,-1.0,,No Response
+1053,Cerulean Aerospace,254000,2026-09-21,Scale,Retail,James Okafor,NA-East,174,False,-21.49,-6.06,-16.81,v4.1.0,1.0,0.0,0.0,0.0,20.5,9.0,Best headless CMS on the market. Period.,Promoter
+1054,Olive Branch Organics,121000,2026-12-06,Growth,Government,Carlos Mendez,EMEA,250,False,-13.82,-18.18,-6.25,v4.1.0,0.0,0.0,0.0,0.0,0.0,6.0,Transformed how our team publishes content. Love it.,Detractor
+1055,Starlight Entertainment,119000,2027-03-30,Growth,Education,Emily Watson,NA-East,364,False,-26.32,-50.0,-22.58,v4.1.0,1.0,0.0,0.0,0.0,8.6,7.0,Best headless CMS on the market. Period.,Passive
+1056,Thunderbolt Motors,43000,2026-12-03,Starter,E-commerce,Sarah Chen,EMEA,247,False,-9.48,0.0,-25.0,v4.2.3,1.0,0.0,0.0,0.0,10.6,-1.0,,No Response
+1057,Pearl Harbor Memorial Trust,119000,2026-10-05,Growth,Education,Anna Kowalski,LATAM,188,False,-35.51,8.33,6.06,v4.2.3,0.0,0.0,0.0,0.0,0.0,7.0,Would recommend to anyone in our industry.,Passive
+1058,Magenta Health,22000,2026-08-22,Starter,Healthcare,Sarah Chen,EMEA,144,False,-5.52,-50.0,0.0,v4.1.0,2.0,0.0,0.0,0.0,15.95,6.0,Would recommend to anyone in our industry.,Detractor
+1059,Cobblestone Properties,163000,2026-09-18,Growth,E-commerce,Emily Watson,EMEA,171,False,-29.12,8.33,-6.06,v4.2.3,2.0,0.0,0.0,0.0,9.6,9.0,Would recommend to anyone in our industry.,Promoter
+1060,Titanium Fitness,38000,2026-10-30,Starter,Media & Publishing,James Okafor,EMEA,213,False,-26.37,-50.0,-50.0,v4.3.0,2.0,0.0,0.0,1.0,7.0,5.0,Would recommend to anyone in our industry.,Detractor
+1061,Flamingo Travel,1802000,2026-10-02,Enterprise,Media & Publishing,Priya Sharma,NA-West,185,False,-27.48,-1.2,-20.68,v4.3.0,1.0,1.0,0.0,1.0,4.0,8.0,,Passive
+1062,Driftwood Publishing,552000,2026-10-14,Enterprise,SaaS / Technology,Anna Kowalski,NA-West,197,False,-4.11,4.76,-42.16,v4.1.0,0.0,0.0,0.0,0.0,0.0,7.0,Would recommend to anyone in our industry.,Passive
+1063,Canyon Edge Adventures,283000,2026-09-08,Scale,Travel & Hospitality,Sarah Chen,APAC,161,False,-26.36,2.86,-18.0,v4.3.0,0.0,0.0,0.0,0.0,0.0,-1.0,,No Response
+1064,Eclipse Software,102000,2027-03-07,Growth,SaaS / Technology,Emily Watson,NA-West,341,False,-22.59,0.0,-24.0,v4.2.3,0.0,0.0,0.0,0.0,0.0,10.0,Would recommend to anyone in our industry.,Promoter
+1065,Harbor Light Consulting,56000,2026-10-21,Growth,Travel & Hospitality,Raj Patel,EMEA,204,False,-12.33,7.69,2.86,v4.3.0,1.0,0.0,0.0,0.0,21.8,8.0,,Passive
+1066,Willow Creek Farms,33000,2027-01-10,Starter,Manufacturing,Anna Kowalski,LATAM,285,False,-4.55,0.0,-20.0,v4.1.0,1.0,0.0,0.0,0.0,16.5,8.0,Best headless CMS on the market. Period.,Passive
+1067,Stormfront Weather Systems,214000,2026-09-12,Scale,Retail,Priya Sharma,LATAM,165,False,4.58,-10.53,-53.33,v4.3.0,3.0,1.0,0.0,0.0,15.333333333333334,7.0,We evaluated 5 CMS platforms. Contentstack won easily.,Passive
+1068,Keystone Education Group,220000,2026-09-08,Scale,Government,Anna Kowalski,EMEA,161,False,-9.73,-15.38,-41.3,v4.3.0,3.0,0.0,0.0,1.0,12.033333333333333,8.0,We evaluated 5 CMS platforms. Contentstack won easily.,Passive
+1069,Catalyst Innovations,429000,2027-04-02,Scale,Financial Services,Anna Kowalski,LATAM,367,False,-6.7,-5.88,-14.61,v4.3.0,3.0,0.0,0.0,1.0,14.4,-1.0,,No Response
+1070,Mirage Digital Agency,117000,2026-08-06,Growth,Travel & Hospitality,Sarah Chen,LATAM,128,False,-9.03,-7.69,-30.77,v4.2.3,2.0,0.0,0.0,0.0,16.950000000000003,5.0,Best headless CMS on the market. Period.,Detractor
+1071,Polaris Navigation,145000,2027-02-20,Growth,Financial Services,Raj Patel,LATAM,326,False,-8.9,8.33,-14.29,v4.1.0,1.0,0.0,0.0,0.0,23.3,8.0,Great developer experience and the support team is phenomenal.,Passive
+1072,Sandcastle Hospitality,265000,2026-12-15,Scale,Manufacturing,Emily Watson,APAC,259,False,15.4,12.82,-10.62,v4.1.0,0.0,0.0,0.0,0.0,0.0,8.0,Best headless CMS on the market. Period.,Passive
+1073,Foxglove Pharmaceuticals,411000,2026-12-13,Scale,Manufacturing,Priya Sharma,NA-West,257,False,-27.66,-51.72,-44.21,v4.3.0,2.0,0.0,0.0,1.0,19.9,-1.0,,No Response
+1074,Ironwood Manufacturing,1894000,2027-01-25,Enterprise,Healthcare,Emily Watson,APAC,300,False,8.53,4.55,-13.38,v4.3.0,2.0,0.0,0.0,0.0,19.85,8.0,We evaluated 5 CMS platforms. Contentstack won easily.,Passive
+1075,Ripple Effect Marketing,35000,2026-12-08,Starter,Media & Publishing,Anna Kowalski,LATAM,252,False,-39.55,-50.0,0.0,v4.2.3,3.0,3.0,0.0,1.0,14.333333333333334,7.0,We evaluated 5 CMS platforms. Contentstack won easily.,Passive
+1076,Basecamp Outdoors,444000,2027-02-26,Scale,Education,Carlos Mendez,LATAM,332,False,16.51,20.0,12.71,v4.1.0,1.0,0.0,0.0,0.0,20.0,8.0,We evaluated 5 CMS platforms. Contentstack won easily.,Passive
+1077,Comet Data Sciences,856000,2026-08-27,Enterprise,Retail,Raj Patel,NA-East,149,False,-32.39,-7.87,-28.09,v4.3.0,1.0,0.0,0.0,0.0,11.4,4.0,We evaluated 5 CMS platforms. Contentstack won easily.,Detractor
+1078,Trailhead Analytics,131000,2026-11-07,Growth,Media & Publishing,Priya Sharma,NA-East,221,False,-16.57,-30.0,15.62,v4.2.3,2.0,0.0,0.0,0.0,9.049999999999999,7.0,Best headless CMS on the market. Period.,Passive
+1079,Spectrum Health Network,31000,2027-03-15,Starter,Government,James Okafor,APAC,349,False,-7.87,0.0,-25.0,v4.3.0,1.0,1.0,0.0,0.0,11.7,8.0,Best headless CMS on the market. Period.,Passive
+1080,Nightfall Security,1821000,2026-10-22,Enterprise,Travel & Hospitality,David Kim,APAC,205,False,-19.14,-34.29,-2.55,v4.3.0,0.0,0.0,0.0,0.0,0.0,8.0,,Passive
+1081,Daybreak Solar,89000,2026-07-17,Growth,Financial Services,Anna Kowalski,NA-West,108,False,-15.0,-7.69,-20.0,v4.2.3,3.0,0.0,0.0,1.0,10.633333333333333,-1.0,,No Response
+1082,Frostbite Gaming,186000,2027-03-09,Growth,E-commerce,Carlos Mendez,NA-East,343,False,3.77,-9.09,-3.7,v4.2.3,0.0,0.0,0.0,0.0,0.0,-1.0,,No Response
+1083,Pebble Stream Media,780000,2027-03-09,Enterprise,Manufacturing,Raj Patel,APAC,343,False,-2.05,14.94,-21.2,v4.1.0,1.0,0.0,0.0,0.0,3.9,9.0,Best headless CMS on the market. Period.,Promoter
+1084,Wildfire Creative,1649000,2027-02-28,Enterprise,Healthcare,David Kim,APAC,334,False,-17.49,-18.29,-40.5,v4.3.0,3.0,1.0,0.0,0.0,11.466666666666667,10.0,Transformed how our team publishes content. Love it.,Promoter
+1085,Anchor Point Financial,330000,2026-12-03,Scale,Manufacturing,David Kim,NA-West,247,False,-38.67,-28.12,-57.65,v4.2.3,1.0,0.0,0.0,0.0,2.9,-1.0,,No Response
+1086,Starboard Ventures,431000,2026-08-23,Scale,Retail,Carlos Mendez,EMEA,145,False,-6.05,-22.58,-6.67,v4.3.0,3.0,0.0,0.0,0.0,10.933333333333335,7.0,Would recommend to anyone in our industry.,Passive
+1087,Quicksilver Payments,368000,2026-08-25,Scale,Healthcare,Priya Sharma,NA-West,147,False,-14.31,0.0,26.72,v4.1.0,3.0,0.0,0.0,0.0,17.566666666666666,8.0,Transformed how our team publishes content. Love it.,Passive
+1088,Hearthstone Properties,1955000,2026-10-01,Enterprise,Media & Publishing,James Okafor,APAC,184,False,-6.9,-41.18,15.02,v4.2.3,3.0,0.0,0.0,0.0,7.333333333333333,9.0,Great developer experience and the support team is phenomenal.,Promoter
+1089,Thunderpeak Mining,1194000,2027-03-10,Enterprise,Travel & Hospitality,Sarah Chen,NA-West,344,False,-7.56,9.64,-43.35,v4.1.0,1.0,0.0,0.0,0.0,19.4,9.0,Would recommend to anyone in our industry.,Promoter
+1090,Bluebell Organics,1317000,2026-07-25,Enterprise,Government,Anna Kowalski,APAC,116,False,-24.83,-1.22,17.33,v4.1.0,1.0,0.0,0.0,0.0,13.5,9.0,,Promoter
+1091,Cascadia Tech,38000,2026-12-14,Starter,Travel & Hospitality,Anna Kowalski,LATAM,258,False,-7.84,0.0,-50.0,v4.1.0,3.0,2.0,0.0,0.0,9.333333333333334,7.0,,Passive
+1092,Silverthorn Consulting,178000,2026-11-04,Growth,Retail,Anna Kowalski,APAC,218,False,-42.34,-16.67,-10.34,v4.1.0,0.0,0.0,0.0,0.0,0.0,8.0,We evaluated 5 CMS platforms. Contentstack won easily.,Passive
+1093,Redstone Engineering,40000,2027-01-03,Starter,Travel & Hospitality,Priya Sharma,APAC,278,False,-33.75,-50.0,0.0,v4.3.0,3.0,0.0,0.0,0.0,14.200000000000001,6.0,We evaluated 5 CMS platforms. Contentstack won easily.,Detractor
+1094,Cloudbreak Surf Co,190000,2026-07-28,Growth,Travel & Hospitality,Sarah Chen,NA-East,119,False,-25.32,0.0,12.12,v4.1.0,3.0,0.0,0.0,0.0,6.366666666666667,-1.0,,No Response
+1095,Copperfield Education,785000,2027-03-08,Enterprise,Healthcare,Sarah Chen,EMEA,342,False,-11.74,-27.27,-47.11,v4.1.0,0.0,0.0,0.0,0.0,0.0,8.0,,Passive
+1096,Everest Data,1187000,2026-10-31,Enterprise,Education,Raj Patel,EMEA,214,False,-1.7,-12.99,-17.31,v4.3.0,2.0,1.0,0.0,0.0,13.399999999999999,2.0,,Detractor
+1097,Icefall Analytics,1084000,2027-02-15,Enterprise,Retail,James Okafor,APAC,321,False,-21.63,-17.86,-0.86,v4.3.0,0.0,0.0,0.0,0.0,0.0,-1.0,,No Response
+1098,Magnolia Health Systems,18000,2027-01-10,Starter,Media & Publishing,James Okafor,NA-East,285,False,-37.93,0.0,-20.0,v4.2.3,0.0,0.0,0.0,0.0,0.0,-1.0,,No Response
+1099,Oakridge Retail,31000,2026-10-25,Starter,E-commerce,Priya Sharma,NA-West,208,False,-9.12,0.0,-25.0,v4.1.0,3.0,1.0,0.0,0.0,11.466666666666667,10.0,We evaluated 5 CMS platforms. Contentstack won easily.,Promoter
+1100,Seabreeze Hospitality,174000,2026-09-11,Growth,Government,Carlos Mendez,APAC,164,False,-11.01,0.0,0.0,v4.2.3,1.0,0.0,0.0,0.0,7.9,7.0,Great developer experience and the support team is phenomenal.,Passive
+1101,Blackthorn Security,393000,2026-10-08,Scale,Government,James Okafor,NA-West,191,False,-2.62,-29.03,-8.0,v4.3.0,0.0,0.0,0.0,0.0,0.0,5.0,Best headless CMS on the market. Period.,Detractor
+1102,Goldrush Fintech,257000,2026-07-28,Scale,Retail,Anna Kowalski,APAC,119,False,2.93,-29.41,-10.42,v4.3.0,2.0,0.0,0.0,0.0,12.45,8.0,We evaluated 5 CMS platforms. Contentstack won easily.,Passive
+1103,Moonrise Studios,70000,2026-11-16,Growth,Financial Services,Emily Watson,LATAM,230,False,-18.46,-15.38,-28.12,v4.3.0,1.0,0.0,0.0,0.0,10.6,6.0,,Detractor
+1104,Timberwolf Logistics,18000,2027-01-08,Starter,Manufacturing,Anna Kowalski,EMEA,283,False,-20.99,0.0,-50.0,v4.3.0,1.0,0.0,0.0,0.0,5.3,8.0,Would recommend to anyone in our industry.,Passive
+1105,Ferndale Publishing,48000,2027-01-05,Starter,E-commerce,Anna Kowalski,APAC,280,False,-20.95,0.0,-50.0,v4.2.3,0.0,0.0,0.0,0.0,0.0,10.0,Would recommend to anyone in our industry.,Promoter
+1106,Stonebridge Capital,43000,2027-01-16,Starter,Education,Priya Sharma,APAC,291,False,-35.39,-50.0,0.0,v4.2.3,2.0,0.0,0.0,0.0,8.2,-1.0,,No Response
+1107,Ravenswood Media,187000,2026-11-30,Growth,Government,David Kim,APAC,244,False,-19.12,7.69,-2.94,v4.3.0,2.0,0.0,0.0,0.0,14.1,10.0,Best headless CMS on the market. Period.,Promoter
+1108,Clearwater Systems,1743000,2026-11-29,Enterprise,SaaS / Technology,Carlos Mendez,NA-East,243,False,-17.11,-21.43,-0.37,v4.1.0,1.0,0.0,0.0,0.0,10.2,7.0,We evaluated 5 CMS platforms. Contentstack won easily.,Passive
+1109,Pinehurst Golf Tech,436000,2026-11-16,Scale,Education,Anna Kowalski,EMEA,230,False,9.6,-5.26,-44.83,v4.1.0,2.0,1.0,0.0,0.0,5.800000000000001,2.0,Transformed how our team publishes content. Love it.,Detractor
+1110,Dewdrop Organic Foods,47000,2026-12-28,Starter,Healthcare,David Kim,NA-West,272,False,10.93,-50.0,20.0,v4.3.0,1.0,0.0,0.0,0.0,23.9,10.0,Great developer experience and the support team is phenomenal.,Promoter
+1111,Firestorm Marketing,335000,2027-01-05,Scale,Retail,Emily Watson,LATAM,280,False,-12.38,-31.25,-15.84,v4.2.3,2.0,0.0,0.0,0.0,20.55,6.0,We evaluated 5 CMS platforms. Contentstack won easily.,Detractor
+1112,Stargazer Telescopes,49000,2026-10-20,Starter,Financial Services,Carlos Mendez,APAC,203,False,7.04,-50.0,0.0,v4.3.0,3.0,1.0,0.0,0.0,17.26666666666667,-1.0,,No Response
+1113,Whitewater Adventures,1664000,2026-11-15,Enterprise,Education,David Kim,APAC,229,False,-7.96,5.49,-15.38,v4.1.0,0.0,0.0,0.0,0.0,0.0,8.0,Best headless CMS on the market. Period.,Passive
+1114,Rosewood Hotels,21000,2026-12-12,Starter,Media & Publishing,Anna Kowalski,NA-West,256,False,13.51,0.0,20.0,v4.3.0,3.0,0.0,0.0,0.0,12.433333333333332,8.0,Would recommend to anyone in our industry.,Passive
+1115,Sapwood Furniture Co,393000,2027-03-14,Scale,Manufacturing,Raj Patel,APAC,348,False,-17.28,-37.5,-9.4,v4.1.0,0.0,0.0,0.0,0.0,0.0,9.0,We evaluated 5 CMS platforms. Contentstack won easily.,Promoter
+1116,Thunderhead Cloud,384000,2027-03-04,Scale,Retail,Emily Watson,EMEA,338,False,-22.8,-12.12,-4.55,v4.2.3,3.0,0.0,0.0,0.0,11.666666666666666,6.0,Best headless CMS on the market. Period.,Detractor
+1117,Marshland Conservation,82000,2026-10-21,Growth,SaaS / Technology,James Okafor,LATAM,204,False,-9.07,-27.27,-7.69,v4.2.3,0.0,0.0,0.0,0.0,0.0,8.0,We evaluated 5 CMS platforms. Contentstack won easily.,Passive
+1118,Ridgeline Software,100000,2026-11-02,Growth,Education,Emily Watson,LATAM,216,False,3.26,-9.09,-17.86,v4.2.3,1.0,0.0,0.0,0.0,11.1,7.0,Great developer experience and the support team is phenomenal.,Passive
+1119,Sunstone Energy,253000,2026-10-22,Scale,Retail,Carlos Mendez,EMEA,205,False,-30.52,-27.27,-22.83,v4.3.0,3.0,1.0,0.0,1.0,11.6,2.0,Best headless CMS on the market. Period.,Detractor

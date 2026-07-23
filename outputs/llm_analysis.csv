@@ -1,0 +1,44 @@
+account_id,overall_sentiment,budget_issue,competitor,migration_issue,executive_involved,renewal_risk_reason,ai_risk_score,ai_risk_level,note_length,raw_note
+1001,negative,True,,False,True,budget cut and evaluation of alternative solutions,55,Medium,228,"3/15 acct 1001 - BritePath Solutions (sic) call. No show for the third 
+time this quarter. Their admin told me the team has been pulled into a CMS evaluation 
+project led by their CTO. Budget was cut 20% across all SaaS vendors."
+1004,negative,True,Contentful,False,False,mid-cycle price increase and poor communication with billing team,65,High,271,"3/28 Pinacle Media (acct 1004)
+They're fine on the product side but the billing team is furious about the mid-cycle 
+price increase. Threatened to go to Contentful. I've offered to set up a call with 
+our finance team but they haven't responded. Two missed QBRs in a row."
+1007,negative,True,Kontent.ai,False,True,pricing and performance issues,75,High,354,"4/5 - Zenith Publishing (#1007)
+Renewl conversation started. They want a 30% discount or they walk. Current ARR is 
+high but margin is already thin. Editor performance on their 50k+ entry library is 
+painful and they know it. Competitor POC with Kontent.ai is apparently already underway.
+CRO was cc'd on the last email thread which is never a good sign."
+1009,neutral,False,WordPress,True,False,potential platform change due to merger,45,Medium,285,"3/18 orion education (1009)
+They love the product but are merging with another ed-tech company that uses WordPress.
+Unclear which platform survives. Decision expected by May. Their champion (Director 
+of Content) is nervous about her own role post-merger. She's been our main advocate."
+1011,neutral,False,,True,False,technical issues with locale management and missing fix in newer version,25,Low,271,"3/26 skyline travel (1011)
+They're expanding internationally which is great, but struggling with our locale 
+management. Filed 3 tickets about locale fallback behavior. On SDK v4.0 so they 
+missed the fix in v4.2. Could go either way on renewal. They asked to talk to PM."
+1015,neutral,False,,False,True,contract review due to acquisition and SLA requirements,20,Low,250,"4/8 evergreen media 1015
+Product is fine, team is fine, but their parent company got acquired and all vendor 
+contracts are under review. New procurement team is asking for enterprise-level 
+SLAs on their Growth plan pricing. It's a negotiation game."
+1016,negative,True,,True,True,low adoption and usage,70,High,362,"4/9 Northstar Logistics
+account 1016 -- they barely use the product. 2 active users out of 15 seats. 
+most content was migrated but nobody adopted the new workflow. classic 
+shelfware situation. Their IT director told me they'd rather downgrade to Starter 
+than pay full price for something they don't use. not churn per se but 
+significant ARR contraction risk."
+1017,neutral,False,,False,False,rocky CSM relationship and customer request for new CSM,10,Low,261,"4/10 pacific rim trading (1017)
+mixed signals. usage metrics look healthy but the CSM relationship has been rocky.
+they've requested a new CSM twice. their last NPS comment was in mandarin so i 
+couldn't read it -- need to get it translated. contract up in may."
+1042,positive,False,,False,True,,10,Low,136,"3/15 acct 1042 - all good, expanding to APAC team next quarter. 
+loves the product. renewal is a formality according to their VP of Eng."
+1024,positive,False,,False,False,,0,Low,172,"04/08 beacon insurance (acct 1024)
+annual check-in. They're regulated so they move slow but steady. renewal 
+isn't until Q4. No concerns, just maintaining the relationship."
+1099,neutral,False,,False,False,delay in response to previous request,10,Low,232,"4/10 - note for account 1099 (Harbourside Dining I think?)
+They called to ask about our GDPR data processing agreement update. Routine 
+request but they seemed annoyed it took 2 weeks last time. Quick turnaround 
+needed. -- Emily W."
