@@ -1,62 +1,197 @@
+"""
+Renewal Risk Intelligence Dashboard
+A comprehensive Streamlit application for analyzing and managing customer renewal risk.
+"""
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import plotly.graph_objects as go
+from datetime import datetime, timedelta
+import numpy as np
+from pathlib import Path
+
+
+# PAGE CONFIGURATION
+
 
 st.set_page_config(
     page_title="Renewal Risk Intelligence",
     page_icon="📊",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        "About": "Renewal Risk Intelligence Dashboard v1.0"
+    }
 )
 
-# =====================================================
-# Load Data
-# =====================================================
 
-df = pd.read_csv("outputs/final_report.csv")
+# CUSTOM STYLING & THEME
 
-# =====================================================
-# Sidebar Filters
-# =====================================================
 
-st.sidebar.title("Filters")
+st.markdown("""
+<style>
+    /* Main Background */
+    .main {
+        background-color: #f8f9fa;
+    }
+    
+    /* Sidebar Styling */
+    [data-testid="stSidebar"] {
+        background-color: #1e293b;
+        color: #f1f5f9;
+    }
+    
+    /* Header Styling */
+    h1, h2, h3 {
+        color: #0f172a;
+        font-weight: 700;
+    }
+    
+    /* Metric Card Styling */
+    .metric-box {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 12px;
+        padding: 20px;
+        color: white;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .metric-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .metric-number {
+        font-size: 28px;
+        font-weight: 700;
+        margin: 10px 0;
+    }
+    
+    .metric-label {
+        font-size: 14px;
+        opacity: 0.9;
+    }
+    
+    /* Risk Tier Colors */
+    .risk-high {
+        color: #dc2626;
+    }
+    
+    .risk-medium {
+        color: #ea580c;
+    }
+    
+    .risk-low {
+        color: #16a34a;
+    }
+    
+    /* Button Styling */
+    .stButton > button {
+        border-radius: 8px;
+        border: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+    
+    /* Divider */
+    hr {
+        margin: 20px 0;
+        border: none;
+        border-top: 2px solid #e2e8f0;
+    }
+    
+    /* Dataframe Styling */
+    .dataframe {
+        border-radius: 8px;
+        overflow: hidden;
+    }
+</style>
+""", unsafe_allow_html=True)
 
+
+# LOAD & CACHE DATA
+
+
+@st.cache_data
+def load_data():
+    """Load data from CSV with caching."""
+    try:
+        df = pd.read_csv("outputs/final_report.csv")
+        return df
+    except FileNotFoundError:
+        st.error("❌ Data file not found. Please run `python main.py` first.")
+        st.stop()
+
+df = load_data()
+
+
+# SIDEBAR FILTERS
+
+
+st.sidebar.markdown("### 🔍 FILTERS")
+st.sidebar.markdown("---")
+
+# Risk Tier Filter
 risk_filter = st.sidebar.multiselect(
     "Risk Tier",
-    options=df["risk_tier"].dropna().unique(),
-    default=df["risk_tier"].dropna().unique()
+    options=sorted(df["risk_tier"].dropna().unique()),
+    default=sorted(df["risk_tier"].dropna().unique()),
+    key="risk_filter"
 )
 
+# Region Filter
 region_filter = st.sidebar.multiselect(
     "Region",
-    options=df["region"].dropna().unique(),
-    default=df["region"].dropna().unique()
+    options=sorted(df["region"].dropna().unique()),
+    default=sorted(df["region"].dropna().unique()),
+    key="region_filter"
 )
 
+# Industry Filter
 industry_filter = st.sidebar.multiselect(
     "Industry",
-    options=df["industry"].dropna().unique(),
-    default=df["industry"].dropna().unique()
+    options=sorted(df["industry"].dropna().unique()),
+    default=sorted(df["industry"].dropna().unique()),
+    key="industry_filter"
 )
 
+# ARR Range Slider
+arr_min, arr_max = float(df["arr"].min()), float(df["arr"].max())
+arr_range = st.sidebar.slider(
+    "ARR Range ($)",
+    min_value=arr_min,
+    max_value=arr_max,
+    value=(arr_min, arr_max),
+    step=10000.0
+)
+
+# Apply Filters
 filtered_df = df[
     (df["risk_tier"].isin(risk_filter))
-    &
-    (df["region"].isin(region_filter))
-    &
-    (df["industry"].isin(industry_filter))
+    & (df["region"].isin(region_filter))
+    & (df["industry"].isin(industry_filter))
+    & (df["arr"] >= arr_range[0])
+    & (df["arr"] <= arr_range[1])
 ]
 
-# =====================================================
+st.sidebar.markdown("---")
+st.sidebar.info(f"📊 Showing {len(filtered_df)} of {len(df)} accounts")
+
+
+
 # Title
-# =====================================================
+
 
 st.title("📊 Renewal Risk Intelligence Dashboard")
 
 st.markdown("---")
 
-# =====================================================
+
 # KPI Cards
-# =====================================================
+
 
 total_accounts = len(filtered_df)
 
@@ -95,9 +230,9 @@ with col6:
 
 st.markdown("---")
 
-# =====================================================
+
 # Charts
-# =====================================================
+
 
 left, right = st.columns(2)
 
@@ -124,9 +259,9 @@ with right:
 
 st.markdown("---")
 
-# =====================================================
+
 # ARR by Risk Tier
-# =====================================================
+
 
 arr_df = (
     filtered_df
@@ -146,9 +281,9 @@ st.plotly_chart(fig, use_container_width=True)
 
 st.markdown("---")
 
-# =====================================================
+
 # Top Risk Accounts
-# =====================================================
+
 
 st.subheader("Top 10 High Risk Accounts")
 
@@ -174,9 +309,9 @@ st.dataframe(
 
 st.markdown("---")
 
-# =====================================================
+
 # Account Explorer
-# =====================================================
+
 
 st.subheader("Customer Explorer")
 
@@ -212,9 +347,7 @@ with c2:
 
 st.markdown("---")
 
-# =====================================================
 # Usage Metrics
-# =====================================================
 
 st.subheader("Usage Metrics")
 
@@ -237,9 +370,9 @@ m3.metric(
 
 st.markdown("---")
 
-# =====================================================
+
 # Ticket & NPS Summary
-# =====================================================
+
 
 a, b, c, d = st.columns(4)
 
@@ -255,9 +388,9 @@ d.metric("SDK Version", sdk)
 
 st.markdown("---")
 
-# =====================================================
+
 # Download Report
-# =====================================================
+
 
 csv = filtered_df.to_csv(index=False).encode("utf-8")
 

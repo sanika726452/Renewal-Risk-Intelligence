@@ -21,10 +21,6 @@ def main():
 
     print("\nLoading datasets...\n")
 
-    # ======================================================
-    # LOAD DATA
-    # ======================================================
-
     loader = DataLoader()
 
     accounts = loader.load_accounts()
@@ -35,9 +31,9 @@ def main():
     notes = loader.load_csm_notes()
     changelog = loader.load_changelog()
 
-    # ======================================================
+   
     # CHANGELOG ANALYSIS
-    # ======================================================
+ 
 
     parser = ChangelogParser()
 
@@ -50,9 +46,9 @@ def main():
 
     print(changelog_info["summary"])
 
-    # ======================================================
+   
     # EDA
-    # ======================================================
+    
 
     inspect_dataframe(accounts, "Accounts")
     inspect_dataframe(usage, "Usage Metrics")
@@ -69,9 +65,9 @@ def main():
     print("=" * 70)
     print(safe_preview(changelog[:1000]))
 
-    # ======================================================
+   
     # CLEAN DATA
-    # ======================================================
+ 
 
     cleaner = DataCleaner()
 
@@ -80,9 +76,9 @@ def main():
     tickets = cleaner.clean_tickets(tickets)
     nps = cleaner.clean_nps(nps)
 
-    # ======================================================
+
     # FEATURE ENGINEERING
-    # ======================================================
+  
 
     engineer = FeatureEngineer(
         reference_date="2026-03-31"
@@ -118,9 +114,8 @@ def main():
 
     print("\nFeature Engineering Completed Successfully!")
 
-    # ======================================================
     # CUSTOMER 360
-    # ======================================================
+  
 
     merger = DataMerger()
 
@@ -138,9 +133,9 @@ def main():
 
     print("\nCustomer 360 Dataset Created!")
 
-    # ======================================================
+  
     # LLM ANALYSIS
-    # ======================================================
+ 
 
     print("\nRunning AI Analysis...\n")
 
@@ -155,9 +150,9 @@ def main():
 
     print(llm_results.head())
 
-    # ======================================================
+
     # MERGE LLM FEATURES
-    # ======================================================
+
 
     customer_360 = customer_360.merge(
         llm_results,
@@ -172,9 +167,8 @@ def main():
 
     print("\nCustomer 360 + AI Features Created!")
 
-    # ======================================================
     # RISK ENGINE
-    # ======================================================
+
 
     risk_engine = RiskEngine()
 
@@ -187,9 +181,9 @@ def main():
 
     print("\nRisk Scoring Completed!")
 
-    # ======================================================
+
     # NEXT 90 DAY RENEWALS
-    # ======================================================
+    
 
     renewal_accounts = customer_360[
         customer_360["renewing_next_90_days"] == True
@@ -204,9 +198,9 @@ def main():
         f"\nAccounts renewing in next 90 days : {len(renewal_accounts)}"
     )
 
-    # ======================================================
+
     # REPORT GENERATION
-    # ======================================================
+  
 
     report_generator = ReportGenerator()
 
@@ -221,9 +215,8 @@ def main():
 
     print("\nFinal Report Generated!")
 
-    # ======================================================
     # NON-OBVIOUS INSIGHTS
-    # ======================================================
+    
 
     insights = []
 
@@ -292,9 +285,8 @@ def main():
 
     print(insight_df)
 
-    # ======================================================
     # SAMPLE OUTPUT
-    # ======================================================
+   
 
     print("\n")
     print("=" * 80)

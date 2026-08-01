@@ -18,9 +18,9 @@ class RiskEngine:
             confidence = 50
             reasons = []
 
-            # =====================================================
+           
             # PRODUCT USAGE
-            # =====================================================
+           
 
             api_decline = row.get("api_decline_pct", 0)
 
@@ -65,10 +65,9 @@ class RiskEngine:
                     score += 10
                     reasons.append("Workflow activity reduced")
 
-            # =====================================================
+            
             # SDK VERSION
-            # =====================================================
-
+           
             sdk = str(row.get("latest_sdk", ""))
 
             if sdk.startswith("v3"):
@@ -76,9 +75,9 @@ class RiskEngine:
                 confidence += 5
                 reasons.append("Customer still using deprecated SDK v3")
 
-            # =====================================================
+            
             # SUPPORT HEALTH
-            # =====================================================
+            
 
             p1 = row.get("p1_tickets", 0)
 
@@ -113,9 +112,9 @@ class RiskEngine:
                     score += 10
                     reasons.append("Slow support resolution")
 
-            # =====================================================
+            
             # NPS
-            # =====================================================
+           
 
             nps = row.get("score")
 
@@ -133,9 +132,9 @@ class RiskEngine:
                 else:
                     score -= 5
 
-            # =====================================================
+        
             # CONTRACT RENEWAL
-            # =====================================================
+            
 
             renewal = row.get("days_to_renewal")
 
@@ -152,10 +151,9 @@ class RiskEngine:
                 elif renewal <= 90:
                     score += 5
 
-            # =====================================================
+           
             # ARR IMPACT
-            # =====================================================
-
+           
             arr = row.get("arr", 0)
 
             if pd.notna(arr):
@@ -167,9 +165,9 @@ class RiskEngine:
                 elif arr >= 500000:
                     score += 5
 
-            # =====================================================
+    
             # PLAN TIER
-            # =====================================================
+            
 
             plan = str(row.get("plan_tier", "")).lower()
 
@@ -179,10 +177,9 @@ class RiskEngine:
             elif plan == "scale":
                 score += 3
 
-            # =====================================================
+            
             # LLM SIGNALS (Future Ready)
-            # =====================================================
-
+            
             if "overall_sentiment" in row:
 
                 sentiment = str(row["overall_sentiment"]).lower()
@@ -228,9 +225,9 @@ class RiskEngine:
                 score -= 10
                 reasons.append("Strong customer health offsets renewal risk") 
                    
-            # =====================================================
+            
             # SCORE NORMALIZATION
-            # =====================================================
+            
 
             if score < 0:
                 score = 0
@@ -241,10 +238,9 @@ class RiskEngine:
             if confidence > 100:
                 confidence = 100
 
-            # =====================================================
+            
             # RISK TIER
-            # =====================================================
-
+            
             if score >= 70:
                 tier = "High"
 

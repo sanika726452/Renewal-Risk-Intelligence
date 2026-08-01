@@ -17,9 +17,8 @@ class ReportGenerator:
 
             reasons = []
 
-            # ======================================================
             # Usage
-            # ======================================================
+            
 
             if pd.notna(row["api_decline_pct"]):
 
@@ -47,9 +46,8 @@ class ReportGenerator:
                         "Workflow adoption is decreasing."
                     )
 
-            # ======================================================
             # SDK
-            # ======================================================
+
 
             sdk = str(row["latest_sdk"])
 
@@ -58,9 +56,9 @@ class ReportGenerator:
                     "The customer is still using the deprecated SDK v3, increasing migration risk."
                 )
 
-            # ======================================================
+          
             # Support
-            # ======================================================
+            
 
             if pd.notna(row["p1_tickets"]):
 
@@ -83,9 +81,8 @@ class ReportGenerator:
                         f"Average support resolution time is {row['avg_resolution_time']:.1f} hours."
                     )
 
-            # ======================================================
             # NPS
-            # ======================================================
+            
 
             if pd.notna(row["score"]):
 
@@ -99,9 +96,9 @@ class ReportGenerator:
                         f"The customer is currently an NPS Passive (Score {int(row['score'])})."
                     )
 
-            # ======================================================
+          
             # Renewal
-            # ======================================================
+       
 
             if pd.notna(row["days_to_renewal"]):
 
@@ -115,9 +112,9 @@ class ReportGenerator:
                         "The account is approaching renewal."
                     )
 
-            # ======================================================
+           
             # ARR
-            # ======================================================
+            
 
             if pd.notna(row["arr"]):
 
@@ -126,9 +123,9 @@ class ReportGenerator:
                         "This is a strategic high-value ARR account."
                     )
 
-            # ======================================================
+            
             # LLM Signals
-            # ======================================================
+           
 
             if "overall_sentiment" in row:
 
@@ -169,9 +166,9 @@ class ReportGenerator:
                         f"The customer appears to be evaluating {competitor}."
                     )
 
-            # ======================================================
+            
             # Executive Summary
-            # ======================================================
+          
 
             if len(reasons) == 0:
 
@@ -186,9 +183,9 @@ class ReportGenerator:
                     + " ".join(reasons)
                 )
 
-            # ======================================================
+
             # Recommendations
-            # ======================================================
+        
 
             if tier == "High":
 

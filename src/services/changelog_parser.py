@@ -24,9 +24,9 @@ class ChangelogParser:
 
             lower = line.lower()
 
-            # ------------------------------------
+            
             # Deprecated SDK Versions
-            # ------------------------------------
+           
 
             sdk_match = re.findall(r"v\d+\.\d+", line)
 
@@ -39,17 +39,16 @@ class ChangelogParser:
 
                 self.deprecated_features.append(line)
 
-            # ------------------------------------
+            
             # Migration Required
-            # ------------------------------------
+           
 
             if "migrate" in lower or "migration" in lower:
 
                 self.migration_required = True
 
-            # ------------------------------------
             # New Features
-            # ------------------------------------
+            
 
             if line.startswith("-"):
 
