@@ -274,7 +274,3 @@ If this project were developed further, I would add:
 # Author
 
 **Sanika Thorat**
-
-Applied AI Engineer Take-Home Assignment
-
-Contentstack – Renewal Risk Intelligence
